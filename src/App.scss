@@ -1,0 +1,59 @@
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+
+    .hint {
+        margin-top: 1rem;
+
+        &.hidden {
+            visibility: hidden;
+        }
+    }
+
+    .color {
+        &-wrapper {
+            background-color: rgba(129,94,255);
+            padding: 2rem;
+            box-shadow: 0px 0px 20px 5px rgba(129,94,255,0.4);
+            border-radius: 1rem;
+        }
+
+        &-preview {
+            width: 24rem;
+            height: 16rem;
+            border-radius: 1rem;
+            border: 2px solid white;
+        }
+
+        &-options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+
+            .color-option {
+                padding: 1rem 2rem;
+                border-radius: 1rem;
+                border: none;
+                background-color: white;
+                cursor: pointer;
+                transition: background-color 0.2s;
+
+                &:not(.color-option--disabled):hover, &--selected {
+                    background-color: #c3bbff;
+                }
+
+                &--right {
+                    background-color: rgb(106, 230, 106);
+                }
+
+                &--disabled {
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
