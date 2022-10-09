@@ -39,10 +39,10 @@ function App() {
 
   const options = useMemo(() => colorOptions?.map((colorOption, index) => {
     const isSelected = selectedColor === colorOption;
-    const isRightAnswer = gameState === 'ENDING' && activeColor === colorOption;
+    const isCorrect = gameState === 'ENDING' && activeColor === colorOption;
     const isDisabled = gameState === 'ENDING';
 
-    return <button className={`color-option ${isSelected ? 'color-option--selected' : ''} ${isRightAnswer ? 'color-option--right' : ''} ${isDisabled ? 'color-option--disabled' : ''}`} key={index} value={colorOption} onClick={() => selectColor(colorOption)}>{colorOption}</button>
+    return <button className={`color-option ${isSelected ? 'color-option--selected' : ''} ${isCorrect ? 'color-option--correct' : ''} ${isDisabled ? 'color-option--disabled' : ''}`} key={index} value={colorOption} onClick={() => selectColor(colorOption)}>{colorOption}</button>
   }), [colorOptions, selectedColor, gameState]);
 
   useEffect(() => {
