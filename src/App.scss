@@ -6,6 +6,19 @@
     height: 100vh;
     width: 100vw;
 
+    .headline {
+        margin: 0;
+    }
+
+    .subline {
+        margin-bottom: 1.5rem;
+
+        a {
+            text-decoration: none;
+            color: var(--active-color);
+        }
+    }
+
     .hint {
         margin-top: 1rem;
 
@@ -15,35 +28,35 @@
     }
 
     .color {
-        &-wrapper {
-            background-color: rgba(129,94,255);
-            padding: 2rem;
-            box-shadow: 0 0 1.25rem 0.313rem rgba(129,94,255,0.4);
-            border-radius: 1rem;
-        }
-
         &-preview {
             width: 24rem;
             height: 16rem;
             border-radius: 1rem;
-            border: 0.125rem solid white;
+            box-shadow: 0 0 1rem 0.3rem rgba(0, 0, 0, 0.1);
+            background-color: var(--active-color);
         }
 
         &-options {
             display: flex;
             justify-content: space-between;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
+            gap: 1rem;
+            padding: 0 1rem;
 
             .color-option {
-                padding: 1rem 2rem;
-                border-radius: 1rem;
-                border: none;
-                background-color: white;
+                padding: 1rem 1rem;
+                border-radius: 0.5rem;
+                border: 0.15rem solid rgba(0, 0, 0, 0.15);
+                background-color: rgb(255, 255, 255);
                 cursor: pointer;
-                transition: background-color 0.2s;
-
+                transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
+                width: 100%;
+                box-shadow: 0 0.25rem 0.5rem 0.05rem rgba(0, 0, 0, 0.1);
+                
                 &:not(.color-option--disabled):hover, &--selected {
-                    background-color: #c3bbff;
+                    transform: translateY(-0.25rem);
+                    box-shadow: 0 0.5rem 0.5rem 0.05rem rgba(0, 0, 0, 0.1);
+                    border: 0.15rem solid rgba(0, 0, 0, 0.25);
                 }
 
                 &--correct {
