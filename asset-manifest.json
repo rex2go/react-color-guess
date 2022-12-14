@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-color-guess/static/css/main.aee35fa5.css",
+    "main.js": "/react-color-guess/static/js/main.f1730455.js",
+    "index.html": "/react-color-guess/index.html",
+    "main.aee35fa5.css.map": "/react-color-guess/static/css/main.aee35fa5.css.map",
+    "main.f1730455.js.map": "/react-color-guess/static/js/main.f1730455.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aee35fa5.css",
+    "static/js/main.f1730455.js"
+  ]
+}
